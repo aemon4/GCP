@@ -1,4 +1,5 @@
-for i in {1..100}
+# This code uses the one by one insert and repeats it x times (1000 by default) in order to test massive insert performance
+for i in {1..1000}
 
 do
 
