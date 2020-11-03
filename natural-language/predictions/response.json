@@ -1,0 +1,53 @@
+{
+  "payload": [
+    {
+      "annotationSpecId": "7602886511071068160",
+      "classification": {
+        "score": 0.51554537
+      },
+      "displayName": "enjoy_the_moment"
+    },
+    {
+      "annotationSpecId": "1838278988036833280",
+      "classification": {
+        "score": 0.4366445
+      },
+      "displayName": "leisure"
+    },
+    {
+      "annotationSpecId": "8179347263374491648",
+      "classification": {
+        "score": 0.0320907
+      },
+      "displayName": "nature"
+    },
+    {
+      "annotationSpecId": "5297043501857374208",
+      "classification": {
+        "score": 0.011128555
+      },
+      "displayName": "affection"
+    },
+    {
+      "annotationSpecId": "3567661244947103744",
+      "classification": {
+        "score": 0.0018546706
+      },
+      "displayName": "achievement"
+    },
+    {
+      "annotationSpecId": "2991200492643680256",
+      "classification": {
+        "score": 0.001391064
+      },
+      "displayName": "exercise"
+    },
+    {
+      "annotationSpecId": "685357483429986304",
+      "classification": {
+        "score": 0.0013451754
+      },
+      "displayName": "bonding"
+    }
+  ]
+}

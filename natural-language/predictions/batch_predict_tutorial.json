@@ -1,0 +1,4 @@
+{
+"input_config": { "gcs_source": { "input_uris": [ "gs://MYBUCKET/natural-language/predict.csv"] } },
+"output_config": { "gcs_destination": { "output_uri_prefix": "gs://MYBUCKET/natural-language" } }
+ }
