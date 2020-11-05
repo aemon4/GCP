@@ -1,4 +1,4 @@
-#TODO fill accordingly
+#Fill accordingly with your values
 
 PROJECT="MYPROJECT-ID"
 BUCKET="MYBUCKET"
