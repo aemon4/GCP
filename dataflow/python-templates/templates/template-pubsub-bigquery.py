@@ -6,7 +6,7 @@ import logging
 import argparse
 import datetime
 
-#TODO Fill this values in order to have them by default
+#Fill this values in order to have them by default
 #Note that the table in BQ needs to have the column names message_body and publish_time
 
 Table = 'projectid:datasetid.tableid'
@@ -35,8 +35,8 @@ def main(argv=None):
     parser.add_argument("--input_topic", default=TOPIC)
     parser.add_argument("--output_table", default=Table)
     args, beam_args = parser.parse_known_args(argv)
-#save_main_session needs to be set to true due to modules being used among the code (mostly datetime)
-#Uncomment the service account email to specify a custom service account
+    # Save_main_session needs to be set to true due to modules being used among the code (mostly datetime)
+    # Uncomment the service account email to specify a custom service account
     p = beam.Pipeline(argv=beam_args,options=PipelineOptions(save_main_session=True,
 region='us-central1'))#, service_account_email='email'))
 
