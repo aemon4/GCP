@@ -16,3 +16,12 @@ We test the streaming inserts by running `insert1.sh` which inserts the data in 
 
 **1.4. Perform massive streaming inserts**
 We can test the performance of massive inserts by using the previous data as a basis and increasing the amount of times in needs to be inserted. This is done in     `test_massive_inserts.sh`. Feel free to change the number of times (1000) that you insert the same data into the table. The code also saves the start and end time of each insert in a logs folder in order to monitor the "speed" of the inserts. Remember that the data is inserted into the streaming buffer, and then slowly introduced in the table itself. Nevertheless, the streaming buffer is queryable. 
+
+**2. Streaming from Pub/Sub topic with Dataflow**
+---
+Another way to stream data into BigQuery, perhaps the most fit for many architectures is using Dataflow, Dataproc, or any other pipeline-based product. 
+
+We start by looking into how to stream data from a Pub/Sub topic to BigQuery. This is well explained using Java code in the official documentation ([see][2]). Using python, you can find the code and details in [dataflow/python-templates][1]
+
+[1]: https://github.com/aemon4/GCP/tree/main/dataflow/python-templates
+[2]: https://cloud.google.com/dataflow/docs/guides/templates/provided-streaming#pubsub-topic-to-bigquery
