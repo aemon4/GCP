@@ -46,6 +46,7 @@ region='us-central1'))#, service_account_email='email'))
         | 'WriteToBigQuery' >> beam.io.WriteToBigQuery(args.output_table, schema=schema, write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND)
     )
     result = p.run()
+    # Warning: The cancel function will not work when using a template, in that case use the canceling function after 'x' time
     result.wait_until_finish(duration=3000)
     result.cancel()   # Cancel the streaming pipeline after a while to avoid consuming more resources
 
