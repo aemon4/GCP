@@ -6,9 +6,10 @@ import logging
 import argparse
 import datetime
 
+#Fill accordingly, we are using a table-id sport_simple for future reference
 schema = 'ex1:STRING, ex2:String, ex3:Int'
-table= 'testing.sport_simple'
-gcs_file = "gs://training_rmir_bucket1/sport-data.txt"
+table= '<dataset_id>.sport_simple'
+gcs_file = "gs://<MyBucket>/sport-data.txt"
 
 class AddTimestamps(beam.DoFn):
     def process(self, element, publish_time=beam.DoFn.TimestampParam):
@@ -53,7 +54,7 @@ region='us-central1'))#, service_account_email='email'))
       | 'WriteToBigQuery' >> beam.io.WriteToBigQuery(args.output_table, schema=schema, write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND)
   )
   result = p.run()
-  result.wait_until_finish(duration=3000)
+  result.wait_until_finish()
 
 if __name__ == '__main__':
   logger = logging.getLogger().setLevel(logging.INFO)
